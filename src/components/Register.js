@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Register.css'; // Importing styles
+import './Register.css';
 
 function Register() {
     const [username, setUsername] = useState('');
@@ -11,7 +11,7 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/register', {
+            const response = await fetch('http://localhost:3000/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function Register() {
 
     return (
         <div className="auth-container">
-            <h2>Register</h2>
+            <h2>REGISTER NOW</h2>
             <form onSubmit={handleRegister} className="auth-form">
                 <input
                     type="text"
@@ -57,8 +57,6 @@ function Register() {
                 />
                 <button type="submit" className="auth-button">Register</button>
             </form>
-
-            {/* Already have an account? Link to login */}
             <p className="auth-text">
                 Already have an account? <Link to="/login" className="auth-link">Log in</Link>
             </p>

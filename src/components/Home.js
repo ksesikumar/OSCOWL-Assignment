@@ -1,4 +1,3 @@
-// home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +11,7 @@ function Home() {
                     <li>
                         <Link to="/register">Go to Register</Link>
                     </li>
-                    {/* Add more navigation links as needed */}
+                    
                 </ul>
             </nav>
         </div>

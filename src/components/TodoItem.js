@@ -16,9 +16,10 @@ function TodoItem({ todo, toggleTodoStatus, deleteTodo }) {
                 >
                     {todo.text}
                 </label>
+                
                 <div className="delete-icon-container">
                     <i
-                        className="fas fa-trash delete-icon" // Correct Font Awesome trash icon
+                        className="fas fa-trash delete-icon" 
                         onClick={() => deleteTodo(todo.id)}
                     ></i>
                 </div>

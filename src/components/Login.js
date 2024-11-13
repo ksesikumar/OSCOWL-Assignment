@@ -10,7 +10,7 @@ function Login({ handleLogin }) {
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/login', {
+            const response = await fetch('http://localhost:3000/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ function Login({ handleLogin }) {
 
             if (response.ok) {
                 const data = await response.json();
-                const token = data.token; // Assuming the server returns a token on successful login
+                const token = data.token; 
                 handleLogin(token); // Pass the token to App.js
                 navigate('/todo');
             } else {
